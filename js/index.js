@@ -24,29 +24,26 @@ var search = function () {
          oSearchBox.style.background="rgba(216,80,92,"+opacity+")";
      }
 };
+//banner
 var banner = function () {
     var oBanner = document.querySelector(".jd_banner");
-    var bannerWidth = oBanner.offsetWidth;
+    var oWidth = oBanner.offsetWidth;
 
     var oImageBox = oBanner.querySelector("ul:first-child");
-
     var oIndicate = oBanner.querySelector("ul:last-child");
-    var aPoint = oIndicate.querySelectorAll("li");
 
-    //添加过渡
+    var aLi = oIndicate.querySelectorAll("li");
+
     function addTransition() {
         oImageBox.style.transition="all, 0.2s";
-        oImageBox.style.webkitTransition="all, 0,2s"
+        oImageBox.style.webkitTransition="all, 0.2s";
     }
 
-    //清除过渡
     function removeTransition() {
         oImageBox.style.transition="none";
-        oImageBox.style.webkitTransition="none"
+        oImageBox.style.webkitTransition="none";
     }
-
-    //设置位移
-    function setTranslate(translateX) {
+    function setTranslate (translateX){
         oImageBox.style.transform="translateX("+translateX+"px)";
         oImageBox.style.webkitTransform="translateX("+translateX+"px)";
     }
@@ -55,63 +52,62 @@ var banner = function () {
     var timer = setInterval(function () {
         index++;
         addTransition();
-        setTranslate(-index*bannerWidth);
+        setTranslate(-index*oWidth);
     }, 1000);
 
     oImageBox.addEventListener("transitionend", function () {
-        if(index>=9){
+        if (index >= 9){
             index = 1;
             removeTransition();
-            setTranslate(-index*bannerWidth);
-
-        }else if(index <= 0){
+            setTranslate(-index*oWidth);
+        } else if(index <=0) {
             index = 8;
             removeTransition();
-            setTranslate(-index*bannerWidth);
+            setTranslate(-index*oWidth);
         }
 
         setPoint();
     }, false);
 
     function setPoint() {
-        for (var i =0; i < aPoint.length; i++){
-            aPoint[i].classList.remove("active");
-            aPoint[index-1].classList.add("active");
+        for(var i = 0; i < aLi.length; i++){
+            aLi[i].classList.remove("active");
+            aLi[index-1].classList.add("active");
         }
     }
 
     var startX = 0;
-    var distanceX = 0;
+    var disX = 0;
     var isMoved = false;
 
-    oImageBox.addEventListener("touchstart", function (ev) {
+    oImageBox.addEventListener("touchstart", function (e) {
         clearInterval(timer);
-        startX = ev.touches[0].clientX;
+        startX = e.touches[0].clientX;
     }, false);
 
-    oImageBox.addEventListener("touchmove", function (ev) {
-        var moveX = ev.touches[0].clientX;
-        distanceX = moveX - startX;
-
-        var translateX = (-index * bannerWidth) + distanceX;
-        removeTransition();
+    oImageBox.addEventListener('touchmove', function (e) {
+        var moveX = e.touches[0].clientX;
+        disX = moveX - startX;
+        var translateX = -index*oWidth + disX;
+        addTransition();
         setTranslate(translateX);
-        isMoved = true;
+
+        isMoved=true;
     }, false);
 
     oImageBox.addEventListener("touchend", function () {
-        if(isMoved){
-            if(Math.abs(distanceX) < bannerWidth/3){
+        if (isMoved){
+            if(Math.abs(disX) < oWidth/3){
                 addTransition();
-                setTranslate(-index*bannerWidth);
+                setTranslate(-index*oWidth);
             }else {
-                if (distanceX > 0){
+                if (disX > 0){
                     index --;
-                }else {
-                    index++
+                } else{
+                    index ++
                 }
                 addTransition();
-                setTranslate(-index*bannerWidth);
+                setTranslate(-index*oWidth);
             }
         }
     }, false);
@@ -120,14 +116,15 @@ var banner = function () {
     timer = setInterval(function () {
         index++;
         addTransition();
-        setTranslate(-index*bannerWidth);
+        setTranslate(-index*oWidth);
     }, 1000);
 
-    startX = 0;
-    distanceX = 0;
-    isMoved = false;
+    startX=0;
+    disX=0;
+    isMoved=false;
 
 };
+
 var downTime = function () {
     var oTime = document.querySelector(".clock_count");
     var aSpan = oTime.querySelectorAll("span");
