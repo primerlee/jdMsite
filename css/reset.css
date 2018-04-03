@@ -1,0 +1,53 @@
+*,
+*:before,
+*:after {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 14px;
+    font-family: sans-serif;
+    color: #333;
+}
+
+a {
+    color: #333;
+    text-decoration: none;
+}
+
+ul, ol {
+    list-style-type: none;
+}
+
+input,
+textarea {
+    resize: none;
+    border: none;
+    -webkit-appearance: none;
+    outline: none;
+}
+
+.clearFix:after {
+    content: "";
+    display: block;
+    height: 0;
+    line-height: 0;
+    visibility: hidden;
+    clear: both;
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+.m10 {
+    margin: 0 10px;
+}

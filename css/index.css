@@ -1,0 +1,281 @@
+body {
+    background: #f5f5f5;
+}
+
+.jd_container {
+    max-width: 640px;
+    min-width: 320px;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.jd-search {
+    height: 40px;
+    background: #d6515e;
+    position: relative;
+}
+
+.jd-search .search_box {
+    min-width: 320px;
+}
+
+.jd-search .icon_logo {
+    display: block;
+    width: 60px;
+    height: 36px;
+    position: absolute;
+    left: 5px;
+    top: 2px;
+    background: url("../images/sprites.png") no-repeat 0 -103px;
+    background-size: 200px 200px;
+}
+
+.jd-search .jd-login {
+    position: absolute;
+    right: 5px;
+    color: #fff;
+    top: 10px;
+}
+
+.jd-search form {
+    margin: 0 40px 0 75px;
+}
+
+.jd-search form .icon-search {
+    position: absolute;
+    display: block;
+    left: 85px;
+    top: 10px;
+    width: 20px;
+    height: 20px;
+    background: url("../images/sprites.png") no-repeat -60px -109px;
+    background-size: 200px 200px;
+}
+
+.jd-search form input {
+    margin: 4px 0;
+    height: 32px;
+    width: 100%;
+    border-radius: 15px;
+    text-indent: 3em;
+}
+
+.jd_banner {
+    position: relative;
+    overflow: hidden;
+}
+
+.jd_banner ul {
+    width: 1000%;
+
+}
+
+.jd_banner ul li {
+    float: left;
+    width: 10%;
+}
+
+.jd_banner ul li a {
+    display: block;
+    width: 100%;
+    font-size: 0;
+}
+
+.jd_banner ul li a img {
+    width: 100%;
+}
+
+.jd_banner .indicate {
+    position: absolute;
+    width: 134px;
+    height: 8px;
+    bottom: 20px;
+    left: 50%;
+    margin-left: -72px;
+}
+
+.jd_banner .indicate li {
+    width: 8px;
+    height: 8px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.jd_banner .indicate li:last-child {
+    margin-right: 0;
+}
+
+.jd_banner .indicate li.active {
+    background: #fff;
+}
+
+.jd_category {
+    background: #fff;
+    padding: 10px 0;
+}
+
+.jd_category ul {
+}
+
+.jd_category ul li {
+    float: left;
+    width: 25%;
+}
+
+.jd_category ul li a {
+    display: block;
+    text-align: center;
+}
+
+.jd_category ul li a img {
+    width: 40px;
+    height: 40px;
+}
+
+.jd_category ul li a p {
+    padding: 10px 0;
+}
+
+.jd_festival {
+    background: #fff;
+    margin-top: 10px;
+}
+
+.jd_festival .title {
+    overflow: hidden;
+    height: 34px;
+    padding: 7px 0;
+}
+
+.jd_festival .title .icon_clock {
+    float: left;
+    width: 16px;
+    height: 20px;
+    background: url("../images/seckill-icon.png") no-repeat;
+    background-size: 16px 20px;
+    margin: 0 10px;
+}
+
+.jd_festival .title .text {
+    float: left;
+    display: inline-block;
+    color: #d6515e;
+    margin-right: 10px;
+}
+
+.jd_festival .title .clock_count {
+    float: left;
+}
+
+.jd_festival .title .clock_count span {
+    background: #000;
+    color: #fff;
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    line-height: 15px;
+    text-align: center;
+}
+
+.jd_festival .title .clock_count span:nth-child(3n) {
+    background: #fff;
+    color: #000;
+    width: 10px;
+}
+
+.jd_festival .title .fr a {
+    margin-right: 10px;
+}
+
+.jd_festival .content {
+}
+
+.jd_festival .content ul {
+    overflow: hidden;
+}
+
+.jd_festival .content ul li {
+    float: left;
+    width: 33.3%;
+}
+
+.jd_festival .content ul li a {
+    display: block;
+    text-align: center;
+
+}
+
+.jd_festival .content ul li a div {
+    width: 100%;
+    border-right: 1px solid #ccc;
+    margin: 10px 0;
+}
+
+.jd_festival .content ul li:last-child a div {
+    border-right: none;
+}
+
+.jd_festival .content ul li a img {
+    display: block;
+    width: 60%;
+    margin: 0 auto;
+}
+
+.jd_festival .content ul li a p {
+    color: #d6515e;
+}
+
+.jd_festival .content ul li a p:last-of-type {
+    color: #333;
+    text-decoration: line-through;
+}
+
+.jd_box {
+    background: #fff;
+    margin-top: 10px;
+}
+
+.jd_box .title {
+    height: 34px;
+    line-height: 34px;
+    border-bottom: 1px solid #ccc;
+}
+
+.jd_box .title h3:before {
+    content: "";
+    display: inline-block;
+    width: 3px;
+    height: 14px;
+    margin: 0 10px;
+    background: #d6515e;
+}
+
+.jd_box .content {
+    overflow: hidden;
+}
+
+.jd_box .content a {
+    display: block;
+    font-size: 0;
+}
+
+.jd_box .content a img {
+    width: 100%;
+}
+
+.border-r {
+    border-right: 1px solid #ccc;
+}
+
+.border-l {
+    border-left: 1px solid #ccc;
+}
+
+.border-b {
+    border-bottom: 1px solid #ccc;
+}
+
+.w50 {
+    width: 50%;
+}
