@@ -10,13 +10,17 @@ body {
 }
 
 .jd-search {
-    height: 40px;
-    background: #d6515e;
-    position: relative;
+    min-width: 320px;
+    width: 100%;
+    max-width: 640px;
+    position: fixed;
+    z-index: 999;
 }
 
 .jd-search .search_box {
-    min-width: 320px;
+    height: 40px;
+    background: rgba(216,80,92, .85);
+
 }
 
 .jd-search .icon_logo {
